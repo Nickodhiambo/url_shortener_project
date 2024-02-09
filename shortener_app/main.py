@@ -29,7 +29,7 @@ def raise_bad_request(message):
 
 @app.post("/url", response_model=schemas.URLInfo)
 def create_url(url: schemas.URLBase, db: Session = Depends(get_db)):
-    """Sends a post request with tartet url"""
+    """Sends a post request with target url"""
     if not validators.url(url.target_url):
         raise_bad_request(message="Your provided URL is not valid")
     

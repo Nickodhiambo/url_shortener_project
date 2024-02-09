@@ -11,7 +11,7 @@ engine = create_engine(
 
 # Initialize a CRUD session
 SessionLocal = sessionmaker(
-        autocommit=False, autoflash=False, bind=engine
+        autocommit=False, autoflush=False, bind=engine
         )
 
 # Links the ORM to db tables

@@ -6,7 +6,7 @@ from .config import get_settings
 
 # Define entry point to database
 engine = create_engine(
-        get_settings().db_url, connect_args={"Check same thread": False}
+        get_settings().db_url, connect_args={"check_same_thread": False}
         )
 
 # Initialize a CRUD session
@@ -15,4 +15,4 @@ SessionLocal = sessionmaker(
         )
 
 # Links the ORM to db tables
-Base = declarative_base
+Base = declarative_base()

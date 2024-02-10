@@ -12,7 +12,7 @@ class URL(URLBase):
 
     class Config:
         """Allows interaction with db using FastAPI ORM"""
-        orm_mode = True
+        from_attributes = True
 
 class URLInfo(URL):
     """Defines shortened and admin url fields"""
